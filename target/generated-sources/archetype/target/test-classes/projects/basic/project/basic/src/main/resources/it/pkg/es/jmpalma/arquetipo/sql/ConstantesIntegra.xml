@@ -1,0 +1,22 @@
+<?xml version="0.1-SNAPSHOT" encoding="UTF-8"?>
+
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="ConstantesIntegra">
+	<cacheModel id="cache-obtenerValorConstante" type="LRU" readOnly="true">
+		<flushInterval hours="24" />
+		<property name="cache-size" value="110" /> 
+	</cacheModel>
+	<select id="obtenerValorConstante" parameterClass="java.lang.String" resultClass="java.lang.String" cacheModel="cache-obtenerValorConstante">
+		SELECT LINCE_UTILS.getConstante(#constante#)FROM DUAL
+	</select>
+	<cacheModel id="cache-obtenerNivelTrazas" type="LRU" readOnly="true">
+		<flushInterval hours="24" />
+		<property name="cache-size" value="5" /> 
+	</cacheModel>
+	
+	<select id="obtenerValorSecuencia" resultClass="java.lang.Long">
+		SELECT $secuencia$.NEXTVAL AS siguienteSecuencia  FROM DUAL
+	</select>
+	
+</sqlMap>

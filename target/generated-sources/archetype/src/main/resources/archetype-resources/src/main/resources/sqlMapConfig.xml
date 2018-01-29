@@ -1,0 +1,11 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="${version}" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<properties resource="properties/constantes.properties"/> 
+	<settings cacheModelsEnabled="true" lazyLoadingEnabled="false" enhancementEnabled="true"/>
+	<sqlMap resource="${packageInPathFormat}/sql/ConstantesIntegra.xml"/>
+	<sqlMap resource="${packageInPathFormat}/sql/${artifactId}.xml"/>
+</sqlMapConfig>
