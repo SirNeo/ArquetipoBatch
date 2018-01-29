@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<properties resource="properties/constantes.properties"/> 
+	<settings cacheModelsEnabled="true" lazyLoadingEnabled="false" enhancementEnabled="true"/>
+	<sqlMap resource="es/jmpalma/arquetipo/sql/ConstantesIntegra.xml"/>
+	<sqlMap resource="es/jmpalma/arquetipo/sql/BatchArquetipo.xml"/>
+</sqlMapConfig>

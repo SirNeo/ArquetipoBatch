@@ -1,0 +1,20 @@
+target/
+
+#ECLIPSE
+.settings
+.classpath
+.project
+
+#VS CODE
+/.vscode
+
+#Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.rar
+*.tar.gz
+
+# Compiled class Files
+*.class
